@@ -17,28 +17,12 @@ public class Calculator {
         this.result=arg1+arg2;
     }
     /**
-     * Summing result and arg
-     * @param arg1 arg
-     */
-    private void add (double arg1){
-        this.result+=arg1;
-    }
-
-    /**
      * Difference of 2 args
      * @param arg1 first arg
      * @param arg2 second arg
      */
     private void diff (double arg1, double arg2){
         this.result=arg1-arg2;
-    }
-
-    /**
-     * Difference of result and arg
-     * @param arg1 arg of difference
-     */
-    private void diff (double arg1){
-        this.result-=arg1;
     }
     /**
      * Division 2 args
@@ -48,30 +32,13 @@ public class Calculator {
     private void div (double arg1, double arg2){
         this.result= arg1/arg2;
     }
-
     /**
-     * Division result by arg
-     * @param arg1 arg of division
-     */
-    public void div (double arg1){
-        this.result= this.result/arg1;
-    }
-
-    /**
-     * Exponentation first arg to second
+     * Math.pow
      * @param arg1 first arg
      * @param arg2 second arg
      */
     private void sqr (double arg1, double arg2){
             this.result=Math.pow(arg1, arg2);
-    }
-
-    /**
-     * Exponentation with one arg
-     * @param arg1 exponentation arg
-     */
-    public void sqr (double arg1){
-        this.result=Math.pow(this.result, arg1);
     }
     /**
      *
@@ -87,6 +54,14 @@ public class Calculator {
     public void cleanResult(){
         this.result=0.0;
     }
+
+    /**
+     * Switch between methods and return result
+     * @param method add/diff/div/sqr
+     * @param first first arg
+     * @param second second arg
+     * @return double result of calculation
+     */
     public double choosing(String method, double first, double second) {
         switch (method) {
             case "add":
